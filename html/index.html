@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class="header__esquerda">            
+            <img src="../img/imovelguide.png" alt="logo da empresa" class="header__esquerda__logo">
+            <nav class="header__esquerda__menu">
+                <ul class="header__esquerda__menu__lista">
+                    <li class="header__esquerda__menu__lista__itens"><a href="">Condomínio</a></li>
+                    <li class="header__esquerda__menu__lista__itens"><a href="">Fórum</a></li>
+                    <li class="header__esquerda__menu__lista__itens"><a href="">Guia</a></li>
+                    <li class="header__esquerda__menu__lista__itens"><a href="">Artigos</a></li>
+                    <li class="header__esquerda__menu__lista__itens"><a href="">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__direita">
+            <nav class="header__direita__menu">
+                <ul class="header__direita__menu__lista">
+                    <li class="header__direita__menu__lista__itens"><a href="">Imóvel</a></li>
+                    <li class="header__direita__menu__lista__itens"><a href="">Planos</a></li>
+                    <li class="header__direita__menu__lista__itens"><a href="">Entrar</a></li>
+                </ul>
+                <button class="header__direita__menu__botaoCadastrar">CADASTRAR-SE</button>
+            </nav>
+            <button class="header__direita__menu__menuHamburquer" onclick="menuVisivel()" hidden><img src="../img/menu.png" alt=""></button>
+        </div>
+        <div class="header__mobile" hidden>
+            <nav class="header__mobile__menu">
+                <ul class="header__mobile__menu__lista">
+                    <li class="header__mobile__menu__lista__itens"><a href="">Condomínio</a></li>
+                    <li class="header__mobile__menu__lista__itens"><a href="">Fórum</a></li>
+                    <li class="header__mobile__menu__lista__itens"><a href="">Guia</a></li>
+                    <li class="header__mobile__menu__lista__itens"><a href="">Artigos</a></li>
+                    <li class="header__mobile__menu__lista__itens"><a href="">Ferramentas</a></li>
+                    <li class="header__mobile__menu__lista__itens"><a href="">Imovel</a></li>
+                    <li class="header__mobile__menu__lista__itens"><a href="">Planos</a></li>
+                    <li class="header__mobile__menu__lista__itens"><a href="">Entrar</a></li>
+                    <li class="header__mobile__menu__lista__itens"><a href="">Cadastrar-se</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <body>
+        <div class="corpo">
+            <div class="corpo__box">
+
+                <div class="corpo__box__funcionario">
+                    <div class="corpo__box__funcionario__foto">
+                        <img src="../img/vendedora.PNG" alt="foto de uma vendedora" class="corpo__box__funcionario__toto__img">
+                    </div>
+                    <div class="corpo__box__funcionario__inforcacoes">
+                        <h2 class="corpo__box__funcionario__inforcacoes__nome">Nome Corretora</h2>
+                        <p class="corpo__box__funcionario__inforcacoes__pontos">3.000 pontos</p>
+                        <p href="#" class="corpo__box__funcionario__inforcacoes__link" onclick="ativarAlertTelefone()">ver telefone</p>
+                    </div>
+                </div>
+    
+                <div class="corpo__box__funcionario">
+                    <div class="corpo__box__funcionario__foto corpo__box__funcionario__foto2">
+                        <img src="../img/vendedor.PNG" alt="" class="corpo__box__funcionario__toto__img">
+                    </div>
+                    <div class="corpo__box__funcionario__inforcacoes">
+                        <h2 class="corpo__box__funcionario__inforcacoes__nome">Nome Corretor</h2>
+                        <p class="corpo__box__funcionario__inforcacoes__pontos">1.260 pontos</p>
+                        <p href="#" class="corpo__box__funcionario__inforcacoes__link" onclick="ativarAlertTelefone()">ver telefone</p>
+                    </div>
+                </div>
+                    
+                
+            </div>
+            <div class="corpo__box corpo__boxResposta">
+                <h2 class="corpo__box__titulo">Mande uma mensagem:</h2>
+                <form action="" class="corpo__box__form">
+                    <input type="text" name="" id="mandarCpf" placeholder="Digite seu CPF" class="corpo__box__form__inputs__mensagem corpo__box__form__cpf" maxlength="14" onkeyup="mascaraCpf()">
+                    <input type="text" name="" id="mandarTelefone" placeholder="Digite seu telefone" class="corpo__box__form__inputs__mensagem corpo__box__form__telefone" maxlength="15" onkeyup="mascaraTelefone()">
+                    <textarea name="" id="" class="corpo__box__form__inputs__mensagem corpo__box__form__assunto" placeholder="Digite o assunto"></textarea>
+                    <button class="corpo__box__form__botao" type="submit" placeholder="Describe yourself here...">Enviar Mensagem</button>
+                </form>
+            </div>
+            <div class="corpo__box">
+                <h2 class="corpo__box__titulo">Regra de 3</h2>
+                <div class="corpo__box__inputsCalculo">
+                    <input placeholder="60" type="number" name="" id="regra3numero1" class="corpo__box__inputsCalculo__input">
+                    <input placeholder="100" type="number" name="" id="regra3numero2" class="corpo__box__inputsCalculo__input">
+                    <input placeholder="30" type="number" name="" id="regra3numero3" class="corpo__box__inputsCalculo__input">
+                    <input type="number" name="" id="regra3resposta" class="corpo__box__inputsCalculo__input corpo__box__inputsCalculo__input__resposta">                
+                </div>
+                <button class="corpo__box__calcular" onclick="regraDe3()">Calcular</button>
+            </div>
+            <div class="corpo__box__comLink">
+                <div class="corpo__box corpo__boxImagem">
+
+                </div>
+                <button class="corpo__box__comLink__link" onclick="abrirModal()">ABRIR IMAGEM NO MODAL</button>
+            </div>
+            <div class="corpo__box__comLink">
+                <div class="corpo__box corpo__boxImagem corpo__box__guia">
+                    <h2 class="corpo__boxImagem__titulo">Imovel Guide</h2>
+                </div>
+               <button><a href="../pdf/guia.rar"type="application/zip">Download</a></button>
+            </div>
+            <div class="corpo__box corpo__box__imagemTransicao">
+
+            </div>
+        </div>
+        <div class="corpo__modal">
+            <div class="corpo__modal__topo">
+                <p class="corpo__modal__topo__sair" onclick="fecharModal()">X</p>
+            </div>
+            <img src="../img/casa.PNG" alt="" class="corpo__modal__imagem">
+        </div>
+        
+    </body>
+</body>
+
+<footer>
+    <nav class="rodape__menu">
+        <ul class="rodape__menu__lista">
+            <li class="rodape__menu__lista__itens">Termos</li>
+            <li class="rodape__menu__lista__itens">Contratos</li>
+            <li class="rodape__menu__lista__itens">Sobre</li>
+        </ul>
+    </nav>
+    <div class="rodape__menu__copy">
+        <p class="rodape__menu__copy__texto">&copy; Copyright 2022. Todos os direitos reservados.</p>
+        <img src="../img/imovelguide.png" alt="logo da empresa" class="rodape__menu__copy__logo">
+    </div>
+
+</footer>
+<script src="../js/alert.js"></script>
+<script src="../js/mascaras.js"></script>
+<script src="../js/regra3.js"></script>
+<script src="../js/visual.js"></script>
+</html>
